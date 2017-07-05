@@ -4,7 +4,7 @@ public class BoardBean {
 	private int seq;
 	private String writer, title, content,regDate;
 
-	public void setSeq() {
+	public void setSeq(int seq) {
 		this.seq = seq;
 	}
 
@@ -12,7 +12,7 @@ public class BoardBean {
 		return seq;
 	}
 
-	public void setWriter() {
+	public void setWriter(String writer) {
 		this.writer = writer;
 	}
 
@@ -20,19 +20,19 @@ public class BoardBean {
 		return writer;
 	}
 
-	public void setTitle() {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 	public String getTitle(){
 		return title;
 	}
-	public void setContent(){
+	public void setContent(String content){
 		this.content=content;
 	}
 	public String getContent(){
 		return content;
 	}
-	public void setRegDate(){
+	public void setRegDate(String regDate){
 		this.regDate=regDate;
 	}
 	public String getRegDate(){
@@ -44,5 +44,7 @@ public class BoardBean {
 		return "BoardBean [seq=" + seq + ", writer=" + writer + ", title=" + title + ", content=" + content
 				+ ", regDate=" + regDate + "]";
 	}
+
+	
 	
 }

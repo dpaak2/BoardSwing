@@ -9,6 +9,6 @@ public interface BoardService {
 	public BoardBean findBySeq(int seq);
 	public BoardBean[] findByWriter(String name);
 	public void updateBoard(BoardBean bean);
-	public void deleteBoard(BoardBean bean);
+	public void deleteBoard(int seq);
 
 }
