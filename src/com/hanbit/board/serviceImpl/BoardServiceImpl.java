@@ -22,7 +22,6 @@ public class BoardServiceImpl implements BoardService {
 			BoardBean[] temp = new BoardBean[count + 1];
 			System.arraycopy(list, 0, temp, 0, count);
 			list = temp;
-			seqCount++;
 		}
 		list[count++] = bean;
 		System.out.println("serviceImpl writeBoard:" + bean.toString());

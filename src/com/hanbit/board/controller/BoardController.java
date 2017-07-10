@@ -52,12 +52,17 @@ public class BoardController {
 				break;
 			case "6"://update
 				board= new BoardBean();
-				board.setSeq(Integer.parseInt(JOptionPane.showInputDialog("update할 seq를 입력하세요")));
-				board.setTitle(JOptionPane.showInputDialog("변경할 제목 입력"));
-				board.setContent(JOptionPane.showInputDialog("새로운 내용 입력"));
-				board.setRegDate(JOptionPane.showInputDialog("수정된 날짜 입력"));
-				service.updateBoard(board);
-				JOptionPane.showMessageDialog(null,"수정이 완료되었습니다.");
+				int updateSeq=Integer.parseInt(JOptionPane.showInputDialog("update할 seq를 입력하세요"));
+				if(updateSeq==board.getSeq()){
+					board.setSeq(updateSeq);
+					board.setTitle(JOptionPane.showInputDialog("변경할 제목 입력"));
+					board.setContent(JOptionPane.showInputDialog("새로운 내용 입력"));
+					board.setRegDate(JOptionPane.showInputDialog("수정된 날짜 입력"));
+					service.updateBoard(board);
+					JOptionPane.showMessageDialog(null,"수정이 완료되었습니다.");
+				}else{
+					JOptionPane.showMessageDialog(null, "article does not exist, plz check again");
+				}
 				break;	
 			case "7"://delete
 				int subjectSeq=Integer.parseInt(JOptionPane.showInputDialog("지울 seqNO를 입력하세요"));
